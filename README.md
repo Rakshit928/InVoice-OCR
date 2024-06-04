@@ -4,7 +4,8 @@ InVoice OCR is an application that tackles the task of extracting key informatio
 
 Here's a breakdown of how it works:
 
-Streamlit Interface: Streamlit provides a user-friendly interface where users can upload their invoice image. This can be a simple drag-and-drop area or a file upload button.
+# Streamlit Interface: 
+Streamlit provides a user-friendly interface where users can upload their invoice image. This can be a simple drag-and-drop area or a file upload button.
 
 Optical Character Recognition (OCR): Once uploaded, the invoice image is processed using an OCR engine. This engine converts the image text into a machine-readable format, typically plain text.
 
@@ -20,7 +21,7 @@ Prices
 Total amount
 Result Presentation: Finally, the extracted information is presented back to the user in a clear and organized format. This could be a table summarizing the invoice details or a downloadable file.
 
-Benefits of using a Large Language Model:
+# Benefits of using a Large Language Model:
 
 Improved Accuracy: LLMs can handle variations in invoice layouts and formatting, leading to more accurate data extraction compared to traditional methods.
 Flexibility: The model can adapt to new invoice formats and data types over time, making the application future-proof.
