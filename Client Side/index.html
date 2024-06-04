@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Pricing</a>
+    <a href="#" id="login-signup-link">Login/Sign-up</a>
+    <a href="#">About Us</a>
+  </nav>
+
+  <div class="container" id="registration-container" style="display: none;">
+    <h2>Registration</h2>
+    <form id="registration-form">
+      <input type="email" id="email" placeholder="Email">
+      <input type="password" id="password" placeholder="Password">
+      <button type="submit" id="register-btn">Register</button>
+    </form>
+    <p id="registration-message"></p>
+  </div>
+
+  <div class="container">
+    <h1>Extract anything</h1>
+    <input type="file" id="file-upload" accept=".txt, .pdf, .doc, .docx">
+    <p>Ask anything about the uploaded file</p>
+    <form id="ask-form">
+      <input type="text" id="question" placeholder="Type your question here">
+      <button type="submit" id="submit-btn">Submit</button>
+    </form>
+  </div>
+
+</body>
+</html>
