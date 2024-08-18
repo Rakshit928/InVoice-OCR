@@ -1,33 +1,48 @@
-# InVoice-OCR
-InVoice OCR is an application that tackles the task of extracting key information from invoice images. It leverages the power of Streamlit, a Python framework for building web apps, and a large language model (LLM)
-<B>https://researchberg.com/index.php/araic/article/view/171/159</B>
+**InVoice OCR: A RAG-Based Invoice Processing Application**
 
-Here's a breakdown of how it works:
+I developed InVoice OCR, an advanced application designed to extract key information from invoice images and respond to client queries using cutting-edge AI technology. The system leverages a Retrieval-Augmented Generation (RAG) model and the Llama2 API, integrated into a Flask web app, to deliver accurate and contextual data extraction.
 
-# Streamlit Interface: 
-Streamlit provides a user-friendly interface where users can upload their invoice image. This can be a simple drag-and-drop area or a file upload button.
+### How It Works:
 
-Optical Character Recognition (OCR): Once uploaded, the invoice image is processed using an OCR engine. This engine converts the image text into a machine-readable format, typically plain text.
+**Flask Web App Interface:**  
+I created a user-friendly Flask web app that allows users to easily upload their invoice images. The interface supports both drag-and-drop functionality and a traditional file upload button.
 
-Large Language Model (LLM) Integration: This is where InVoice OCR takes a leap forward. Instead of relying solely on basic text parsing techniques, it utilizes an LLM like Gemini. The extracted text is fed to the LLM, allowing it to understand the context and structure of the invoice.
+**Optical Character Recognition (OCR):**  
+After the user uploads an invoice image, the system processes it using an OCR engine, converting the image text into a machine-readable format.
 
-Information Extraction: Gemini, with its advanced capabilities, goes beyond just recognizing characters. It can identify and extract crucial invoice fields like:
+**Large Language Model (LLM) Integration with RAG:**  
+I integrated the extracted text into a RAG system that utilizes the Llama2 API. This setup not only extracts the text but also enables the system to understand the context and structure of the invoice, allowing it to answer specific client queries related to the invoice.
 
-Merchant name
-Invoice date
-Item descriptions
-Quantities
-Prices
-Total amount
-Result Presentation: Finally, the extracted information is presented back to the user in a clear and organized format. This could be a table summarizing the invoice details or a downloadable file.
+**POST Request to Postman:**  
+To validate and test the system’s functionality, I sent a POST request to the Postman app with the extracted text and a client query. The system, leveraging the Llama2 API, processed the query and returned the answer, demonstrating the model's ability to handle real-time inquiries based on invoice data.
 
-# Benefits of using a Large Language Model:
+**Information Extraction:**  
+With the Llama2 API, the system identifies and extracts crucial invoice fields, such as:
+- Merchant name
+- Invoice date
+- Item descriptions
+- Quantities
+- Prices
+- Total amount
 
-Improved Accuracy: LLMs can handle variations in invoice layouts and formatting, leading to more accurate data extraction compared to traditional methods.
-Flexibility: The model can adapt to new invoice formats and data types over time, making the application future-proof.
-Contextual Understanding: LLMs can understand the relationships between different data points, improving the overall quality of extracted information.
-Streamlit plays a crucial role by:
+**Query Answering and Data Storage:**  
+In addition to extracting data, the system answers specific queries about the invoice content. I designed it to store all extracted information and related query responses in a ChromaDB directory named "db" for easy retrieval and future reference.
 
-Simplifying Development: Streamlit allows for rapid development of web applications with minimal coding effort.
-User-Friendly Interface: It creates a user-friendly experience for uploading invoices and viewing extracted data.
-In essence, InVoice OCR combines the strengths of Streamlit's user-friendly development and an LLM's powerful information extraction capabilities to create a robust and adaptable solution for invoice data processing.
+**Result Presentation:**  
+The system presents the processed and extracted information to the user in a clear, organized format, such as a table summarizing the invoice details or a downloadable file.
+
+### Key Benefits:
+
+**Enhanced Accuracy:**  
+By integrating the RAG system with Llama2, I ensured improved accuracy in data extraction, accommodating variations in invoice formats and layouts.
+
+**Adaptability:**  
+The model adapts to new invoice formats and query types over time, ensuring the application remains effective as client needs evolve.
+
+**Contextual Understanding:**  
+The LLM’s ability to understand the relationships between different data points enhances the quality of the extracted information and the accuracy of responses to client queries.
+
+**Streamlined Development and User Experience:**  
+By using Flask, I streamlined the development process and created a seamless, intuitive user experience for uploading invoices and accessing extracted data.
+
+In summary, I combined the powerful capabilities of a RAG system with the Llama2 API, integrated into a Flask web app, to create InVoice OCR—a robust and adaptable solution for invoice data extraction and query answering. The system’s effectiveness was validated by successfully sending POST requests to Postman and receiving accurate answers based on the extracted invoice data.
